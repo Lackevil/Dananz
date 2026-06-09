@@ -1,0 +1,45 @@
+// -------- Hero --------
+
+// Imports
+
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+
+.hero {
+	margin-bottom: clamp(8rem, 5vw, 10rem);
+
+	// &__container {
+	// }
+
+	// &__inner {
+	// }
+
+	&__title {
+		@include title($black-50, clamp(4rem, 5vw, 5.6rem));
+
+		margin-bottom: 3.6rem;
+		text-align: center;
+	}
+
+	&__text.text {
+		margin: 0 auto;
+		margin-bottom: clamp(3.6rem, 10vw, 8.6rem);
+		max-width: 58.2rem;
+		color: $black;
+		text-align: center;
+	}
+
+	&__image {
+		max-height: 51.3rem;
+
+		& > img {
+			display: block;
+			width: 100%;
+			height: auto;
+			max-height: 51.3rem;
+			object-fit: cover;
+		}
+	}
+}
+
+// -------- Hero --------

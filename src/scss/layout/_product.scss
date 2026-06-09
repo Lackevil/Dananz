@@ -1,0 +1,65 @@
+// -------- Product --------
+
+// Imports
+
+@use '../base/variables' as *;
+
+.product {
+	margin-bottom: clamp(7rem, 12vw, 10rem);
+
+	// &__container {
+	// }
+
+	// &__inner {
+	// }
+
+	// &__header {
+	// }
+
+	&__title.title-h2 {
+		margin-bottom: 2rem;
+
+		&::after {
+			width: 100%;
+
+			@media (min-width: $bp-md) {
+				width: 100%;
+			}
+		}
+	}
+
+	&__description {
+		max-width: 33.7rem;
+	}
+
+	// &__accordion {
+	// }
+}
+
+.header-product {
+	display: flex;
+	flex-direction: column;
+	gap: 3rem;
+	margin-bottom: clamp(5rem, 5vw, 7.3rem);
+
+	@media (min-width: $bp-md) {
+		flex-direction: row;
+		justify-content: space-between;
+		gap: 5rem;
+	}
+
+	&__titles {
+		@media (min-width: $bp-md) {
+			flex: 0 1 50rem;
+		}
+	}
+
+	&__text.text {
+		@media (min-width: $bp-md) {
+			flex: 0 1 47.3rem;
+			align-self: flex-end;
+			text-wrap: pretty;
+		}
+	}
+}
+// -------- Product --------

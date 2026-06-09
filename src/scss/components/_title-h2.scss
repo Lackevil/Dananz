@@ -1,0 +1,29 @@
+// -------- Title H2 --------
+
+// Imports
+
+@use '../base/variables' as *;
+
+.title-h2 {
+	position: relative;
+	font-weight: 500;
+	font-size: 1.6rem;
+	line-height: 150%;
+	text-transform: uppercase;
+
+	&::after {
+		position: absolute;
+		top: 45%;
+		left: 8rem;
+		background-color: $black;
+		width: 80%;
+		height: 0.2rem;
+		content: '';
+
+		@media (min-width: $bp-md) {
+			width: 40%;
+		}
+	}
+}
+
+// -------- Title H2 --------

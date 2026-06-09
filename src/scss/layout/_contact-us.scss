@@ -1,0 +1,47 @@
+// -------- Contact Us --------
+
+// Imports
+
+@use '../base/variables' as *;
+
+.contact-us {
+	background-color: $color-primary;
+	padding: clamp(3rem, 5vw, 3.8rem) 0;
+
+	// &__container {
+	// }
+
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		gap: 3rem;
+
+		@media (min-width: $bp-md) {
+			flex-direction: row;
+			justify-content: space-between;
+			gap: 5rem;
+		}
+	}
+
+	&__description {
+		flex: 0 1 60%;
+		color: $white;
+	}
+
+	&__action {
+		max-width: 43.2rem;
+	}
+
+	&__text {
+		margin-bottom: 2rem;
+		color: $lightgray;
+		font-weight: 400;
+		font-size: clamp(1.6rem, 5vw, 1.8rem);
+		line-height: 160%;
+	}
+
+	// &__btn {
+	// }
+}
+
+// -------- Contact Us --------

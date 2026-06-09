@@ -1,0 +1,12 @@
+// -------- Stats --------
+
+// Imports
+
+@use '../base/variables' as *;
+
+.text {
+	color: $black-10;
+	font-weight: 400;
+	font-size: clamp(1.6rem, 5vw, 1.8rem);
+	line-height: 160%;
+}

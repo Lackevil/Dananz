@@ -1,0 +1,44 @@
+// -------- Designer --------
+
+// Imports
+
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+
+.designer {
+	margin-bottom: clamp(7rem, 10vw, 10rem);
+
+	// &__container {
+	// }
+
+	// &__inner {
+	// }
+
+	&__title {
+		margin-bottom: 2rem;
+
+		&::after {
+			margin-left: 1rem;
+		}
+	}
+
+	&__description {
+		margin-bottom: 2.4rem;
+	}
+
+	&__text {
+		margin-bottom: clamp(4rem, 5vw, 8rem);
+		max-width: 47.1rem;
+	}
+
+	&__row {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 2.4rem;
+	}
+
+	// &__item {
+	// }
+}
+
+// -------- Designer --------

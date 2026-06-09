@@ -1,0 +1,51 @@
+// -------- Button --------
+
+// Imports
+
+@use '../base/variables' as *;
+
+.btn {
+	display: inline-block;
+	transition:
+		background-color 0.2s ease-in-out,
+		color 0.2s ease-in-out;
+	border: 0.1rem solid;
+	padding: 1.4rem 3.2rem;
+	font-weight: 500;
+	font-size: 1.4rem;
+	line-height: 150%;
+	font-family: inherit;
+}
+
+.btn--colored {
+	border-color: $color-primary;
+	background-color: $color-primary;
+	color: $white;
+
+	&:hover {
+		background-color: $white;
+		color: $color-primary;
+	}
+}
+
+.btn--white {
+	border-color: $white;
+	background-color: $white;
+	color: $black-50;
+
+	&:hover {
+		background-color: initial;
+		color: $white;
+	}
+}
+
+.btn--bordered {
+	border-color: $color-primary;
+
+	&:hover {
+		background-color: $color-primary;
+		color: $white;
+	}
+}
+
+// -------- Button --------

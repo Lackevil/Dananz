@@ -1,0 +1,50 @@
+// -------- Stats --------
+
+// Imports
+
+@use '../base/variables' as *;
+
+.stats {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	gap: clamp(3rem, 5vw, 5.7rem);
+	z-index: 1;
+	background-color: $color-primary;
+	padding: clamp(1rem, 3vw, 4rem) clamp(1rem, 3vw, 4.8rem);
+	text-align: center;
+
+	@media (min-width: $bp-sm) {
+		flex-direction: row;
+	}
+
+	@media (min-width: $bp-md) {
+		flex-direction: column;
+	}
+
+	// &__item {
+	// }
+}
+
+.item-stats {
+	display: flex;
+	flex-direction: column;
+
+	&__title,
+	&__name {
+		color: $white;
+		font-weight: 400;
+		line-height: 160%;
+	}
+
+	&__title {
+		font-size: clamp(3.2rem, 4vw, 5.2rem);
+	}
+
+	&__name {
+		font-size: 1.6rem;
+	}
+}
+
+// -------- Stats --------

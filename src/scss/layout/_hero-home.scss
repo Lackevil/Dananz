@@ -1,0 +1,86 @@
+// -------- Hero --------
+
+// Imports
+
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+
+.hero {
+	margin: clamp(8rem, 15vw, 19.1rem) 0 clamp(8rem, 10vw, 16rem);
+
+	&__container.hero-home {
+		position: relative;
+
+		// Decor line
+
+		&::after {
+			display: none;
+			position: absolute;
+			top: clamp(3rem, 4vw, 5rem);
+			right: 0;
+			background-color: $black;
+			width: 100%;
+			max-width: 56%;
+			height: 0.2rem;
+			content: '';
+		}
+
+		@media (min-width: $bp-md) {
+			&::after {
+				display: block;
+			}
+		}
+	}
+
+	// &__inner {
+	// }
+
+	&__title.title {
+		@include title($black-50, clamp(4rem, 5vw, 7rem));
+		margin-bottom: 4.6rem;
+		text-align: center;
+
+		@media (min-width: $bp-md) {
+			max-width: 50%;
+			text-align: initial;
+		}
+	}
+
+	&__image {
+		margin-bottom: 1rem;
+
+		& > img {
+			display: block;
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	&__copyright {
+		position: static;
+		color: $black-50;
+		font-weight: 500;
+		font-size: clamp(1.2rem, 1.5vw, 1.8rem);
+		line-height: 150%;
+
+		@media (min-width: $bp-md) {
+			position: absolute;
+			top: clamp(10rem, 15vw, 17rem);
+			right: 0;
+			transform: rotate(-90deg);
+			margin-right: clamp(-3rem, 2vw, -5rem);
+		}
+	}
+
+	&__stats {
+		z-index: 2;
+
+		@media (min-width: $bp-md) {
+			position: absolute;
+			top: clamp(8rem, 10vw, 14.5rem);
+			right: clamp(14rem, 15vw, 18rem);
+		}
+	}
+}
+
+// -------- Hero --------

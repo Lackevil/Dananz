@@ -1,0 +1,23 @@
+// -------- Logo --------
+
+// Imports
+
+@use '../base/variables' as *;
+
+.logo {
+	display: block;
+	max-width: 10.6rem;
+
+	& > img {
+		display: block;
+		width: 100%;
+		height: auto;
+		object-fit: contain;
+	}
+
+	@media (min-width: $bp-sm) {
+		max-width: 12.6rem;
+	}
+}
+
+// -------- Logo --------

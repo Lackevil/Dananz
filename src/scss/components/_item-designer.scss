@@ -1,0 +1,51 @@
+// -------- Item-designer --------
+
+// Imports
+
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+
+.item-designer {
+	position: relative;
+	flex: 1 1 auto;
+	background-color: $color-primary;
+
+	@media (min-width: $bp-sm) {
+		flex: 1 1 40%;
+	}
+
+	@media (min-width: $bp-md) {
+		flex: 1 1 23%;
+	}
+
+	&__image {
+		& > img {
+			display: block;
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	&__info {
+		position: absolute;
+		bottom: 1.2rem;
+		left: 50%;
+		transform: translateX(-50%);
+		background-color: $white;
+		padding: 1.8rem 1.6rem;
+		width: 90%;
+	}
+
+	&__name {
+		@include title-h3($mb: 0.2rem);
+	}
+
+	&__position {
+		color: $black-10;
+		font-weight: 400;
+		font-size: 1.6rem;
+		line-height: 160%;
+	}
+}
+
+// -------- Item-designer --------

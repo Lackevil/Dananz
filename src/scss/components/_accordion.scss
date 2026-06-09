@@ -1,0 +1,66 @@
+// -------- Accordion --------
+
+// Imports
+
+@use '../base/variables' as *;
+
+.accordion {
+	cursor: pointer;
+
+	&__item {
+		margin-top: clamp(2.5rem, 5vw, 3.5rem);
+		color: $black-50;
+		font-weight: 600;
+		line-height: 140%;
+	}
+
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center¡;
+	}
+
+	// &__nummer {
+	// }
+
+	&__title {
+		margin-left: clamp(2rem, 5vw, 3.5rem);
+	}
+
+	&__arrow {
+		transition: transform 0.2s ease-in-out;
+		margin-left: auto;
+		width: 3.2rem;
+		height: 3.2rem;
+
+		&.active {
+			transform: rotate(90deg);
+		}
+	}
+
+	&__text {
+		display: none;
+		margin-top: clamp(2rem, 5vw, 3.5rem);
+		color: $black-50;
+
+		&.active {
+			display: block;
+		}
+	}
+}
+
+.accordion--sm {
+	padding: 0 0 4rem 0;
+	max-width: 88.3rem;
+	font-size: clamp(1.6rem, 5vw, 2.4rem);
+
+	@media (min-width: $bp-md) {
+		padding: 0 4rem 4rem 0;
+	}
+}
+
+.accordion--md {
+	font-size: clamp(1.8rem, 5vw, 3.2rem);
+}
+
+// -------- Accordion --------

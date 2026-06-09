@@ -1,0 +1,112 @@
+// -------- Location --------
+
+// Imports
+
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+
+@mixin text-location {
+	color: $black-10;
+	font-size: 1.8rem;
+	line-height: 160%;
+}
+
+.location {
+	margin-bottom: clamp(8rem, 5vw, 10rem);
+
+	// &__container {
+	// }
+
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		gap: 5rem;
+
+		@media (min-width: $bp-md) {
+			flex-direction: initial;
+			gap: 8rem;
+		}
+	}
+
+	&__title {
+		margin-bottom: 2rem;
+
+		&.title-h2::after {
+			left: 10rem;
+		}
+	}
+
+	&__contacts {
+		& a {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	&__description {
+		margin-bottom: 2.4rem;
+	}
+
+	&__note {
+		margin-bottom: clamp(2rem, 5vw, 4rem);
+		@include text-location;
+	}
+
+	// &__email {
+	// }
+
+	// &__phone {
+	// }
+
+	&__row {
+		display: flex;
+		flex: 1 1 58rem;
+		flex-wrap: wrap;
+		justify-content: flex-end;
+		gap: clamp(2rem, 5vw, 4rem) clamp(3rem, 5vw, 6rem);
+	}
+
+	// &__item {
+	// }
+}
+
+.email-location {
+	margin-bottom: clamp(2rem, 5vw, 3.3rem);
+
+	&__title {
+		@include title-h3($mb: 1rem);
+	}
+
+	&__email {
+		@include text-location;
+	}
+}
+
+.phone-location {
+	&__title {
+		@include title-h3($mb: 1rem);
+	}
+
+	&__phone {
+		@include text-location;
+	}
+}
+
+.item-location {
+	flex: 1 1 auto;
+
+	@media (min-width: $bp-lg) {
+		flex: 0 1 33.4rem;
+		max-width: 33.4rem;
+	}
+
+	&__title {
+		@include title-h3($mb: clamp(1.5rem, 5vw, 3rem));
+	}
+
+	// &__text {
+	// }
+}
+
+// -------- Location --------

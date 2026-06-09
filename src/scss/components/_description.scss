@@ -1,0 +1,11 @@
+// -------- Description --------
+
+// Imports
+
+@use '../base/variables' as *;
+
+.description {
+	font-weight: 600;
+	font-size: clamp(2.7rem, 3vw, 3.6rem);
+	line-height: 170%;
+}

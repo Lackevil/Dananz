@@ -1,0 +1,47 @@
+// -------- Main Styles --------
+
+// Imports
+
+// Base
+
+@use 'base/reset';
+@use 'base/fonts';
+@use 'base/variables' as *;
+@use 'base/mixins' as *;
+
+// Layouts
+
+@use './layout/layouts';
+
+// Components
+
+@use './components/components';
+
+// General
+
+body {
+	font-family: $font-main;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+	overflow: hidden;
+}
+
+[class*='__container'] {
+	margin: 0 auto;
+	padding: 0 1.5rem;
+	max-width: 135rem;
+}
+
+.main {
+	flex: 1 1 auto;
+}
+
+.overflow {
+	overflow: hidden;
+}
+
+// -------- Main Styles --------

@@ -1,0 +1,67 @@
+// -------- Service --------
+
+// Imports
+
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+
+.service {
+	margin-bottom: clamp(8rem, 10vw, 10rem);
+
+	// &__container {
+	// }
+
+	// &__inner {
+	// }
+
+	// &__title {
+	// }
+
+	// &__description {
+	// }
+
+	&__text {
+		margin-bottom: 4rem;
+	}
+
+	&__cards {
+		display: flex;
+		flex-direction: column;
+		gap: 1.8rem;
+
+		@media (min-width: $bp-md) {
+			flex-direction: initial;
+		}
+	}
+
+	// &__card {
+	// }
+}
+
+.card {
+	display: flex;
+	flex: 0 1 33.333%;
+	flex-direction: column;
+	align-items: center;
+	gap: 2rem;
+	box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
+	background: var(--grayscale-white);
+	padding: 2rem clamp(2rem, 7vw, 2.7rem);
+
+	&__avatar {
+		border-radius: 50%;
+		background-color: $lightgray;
+		width: 6.3rem;
+		height: 6.3rem;
+	}
+
+	&__title {
+		@include title-h3($mb: 0rem);
+	}
+
+	&__text {
+		text-align: center;
+	}
+}
+
+// -------- Service --------

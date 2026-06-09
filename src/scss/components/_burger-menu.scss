@@ -1,0 +1,49 @@
+// -------- Burger menu --------
+
+// Imports
+
+@use '../base/variables' as *;
+
+.burger-menu {
+	display: flex;
+	position: relative;
+	flex-direction: column;
+	justify-content: space-between;
+	transition: transform 0.5s ease-in-out;
+	background: none;
+	padding: 1.5rem 1rem;
+	width: 5rem;
+	height: 5rem;
+
+	&.active {
+		transform: rotate(-90deg);
+
+		& > span {
+			&:nth-child(1) {
+				transform: translateY(0.9rem) rotate(45deg);
+			}
+
+			&:nth-child(2) {
+				opacity: 0;
+			}
+
+			&:nth-child(3) {
+				transform: translateY(-0.9rem) rotate(-45deg);
+			}
+		}
+	}
+
+	@media (min-width: $bp-md) {
+		display: none;
+	}
+
+	& > span {
+		position: relative;
+		transition: ease-in-out 0.3s all;
+		background-color: $color-primary;
+		width: 100%;
+		height: 0.3rem;
+	}
+}
+
+// -------- Burger menu --------

@@ -1,0 +1,22 @@
+// -------- Mixins --------
+
+// Imports
+
+@use '../base/variables' as *;
+
+@mixin title($color: $black, $fontSize: 5.6rem) {
+	color: $color;
+	font-weight: 700;
+	font-size: $fontSize;
+	line-height: 140%;
+}
+
+@mixin title-h3($fz: clamp(1.8rem, 2vw, 2.4rem), $mb: 2rem) {
+	margin-bottom: $mb;
+	color: $black-50;
+	font-weight: 600;
+	font-size: $fz;
+	line-height: 140%;
+}
+
+// -------- Mixins --------

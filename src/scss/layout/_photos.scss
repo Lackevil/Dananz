@@ -1,0 +1,55 @@
+// -------- Photos --------
+
+// Imports
+
+@use '../base/variables' as *;
+
+.photos {
+	margin-bottom: clamp(8rem, 10vw, 10rem);
+
+	// &__container {
+	// }
+
+	// &__inner {
+	// }
+
+	&__row {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 3.2rem;
+
+		@media (min-width: $bp-lg) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	&__item {
+		max-height: 60rem;
+		overflow: hidden;
+
+		@media (min-width: $bp-lg) {
+			max-height: none;
+		}
+
+		& > img {
+			display: block;
+			transition: ease 0.4s transform;
+			width: 100%;
+			height: auto;
+		}
+
+		&:nth-child(3) {
+			@media (min-width: $bp-lg) {
+				grid-column: span 2;
+			}
+		}
+
+		&:hover {
+			& > img {
+				transform: scale(1.02);
+			}
+		}
+	}
+}
+
+// -------- Photos --------

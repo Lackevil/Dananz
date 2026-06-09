@@ -1,0 +1,167 @@
+// -------- Footer --------
+
+// Imports
+
+@use '../base/variables' as *;
+
+.footer {
+	padding: clamp(4rem, 5vw, 8rem) 0;
+
+	// &__container {
+	// }
+
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		gap: 3rem;
+
+		@media (min-width: $bp-md) {
+			flex-direction: row;
+			justify-content: space-between;
+			gap: 5rem;
+		}
+	}
+
+	&__text {
+		max-width: 48.1rem;
+	}
+
+	&__logo {
+		margin-bottom: 1rem;
+	}
+
+	// &__description {
+	// }
+
+	// &__contact {
+	// }
+}
+
+.contact {
+	margin-top: 0;
+
+	@media (min-width: $bp-md) {
+		margin-top: 4rem;
+	}
+
+	// &__form {
+	// }
+
+	&__submit {
+		position: absolute;
+		top: 60%;
+		right: 0;
+		transition: transform 0.3s ease-in-out;
+		background: none;
+
+		@media (min-width: $bp-md) {
+			right: -1rem;
+		}
+
+		&:hover {
+			transform: translateX(0.5rem);
+		}
+	}
+
+	// &__social {
+	// }
+}
+
+.form-contact {
+	position: relative;
+	margin-bottom: 4rem;
+	// max-width: 60%;
+
+	@media (min-width: $bp-md) {
+		max-width: none;
+	}
+
+	&__label-email {
+		display: flex;
+		position: relative;
+		flex-direction: column;
+		padding-left: 2.4rem;
+		color: $black-50;
+		font-size: 1.8rem;
+		line-height: 160%;
+
+		&::before {
+			position: absolute;
+			top: 0.8rem;
+			left: 0;
+			border-radius: 50%;
+			background-color: $black-50;
+			width: 1.4rem;
+			height: 1.4rem;
+			content: '';
+		}
+	}
+
+	&__email {
+		position: relative;
+		left: -2.4rem;
+		margin-top: 2.4rem;
+		border-bottom: 0.1rem solid $black-50;
+		padding-bottom: 1.5rem;
+		width: 105%;
+		font-size: 1.6rem;
+		line-height: 160%;
+
+		@media (min-width: $bp-md) {
+			width: 110%;
+		}
+
+		&::placeholder {
+			color: $lightgray;
+			font-size: 1.6rem;
+			line-height: 160%;
+			font-family: inherit;
+		}
+	}
+}
+
+.social {
+	margin-left: 0;
+	max-width: 20rem;
+
+	@media (min-width: $bp-md) {
+		margin-left: auto;
+	}
+
+	&__title {
+		display: block;
+		margin-bottom: 1.5rem;
+		font-size: 1.6rem;
+		line-height: 160%;
+	}
+
+	&__list {
+		display: flex;
+		gap: 2.5rem;
+	}
+
+	// &__item {
+	// }
+
+	&__link {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transition:
+			background-color 0.2s ease-in-out,
+			fill 0.2s ease-in-out;
+		border-radius: 50%;
+		background-color: $lightgray;
+		padding: 0.4rem;
+
+		&:hover {
+			background-color: $color-primary;
+
+			svg > path {
+				fill: $white;
+			}
+		}
+	}
+}
+
+// -------- Footer --------
